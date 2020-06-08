@@ -1,0 +1,10 @@
+<h3>Your cart currently contains:</h3>
+
+<%= session[:cart] %>
+
+<br>
+Would you like to add an item?
+<%= form_tag '/products', method: :post %>
+  <%= text_field_tag "product" %>
+
+  <%= submit_tag 'add to cart' %>
